@@ -1,0 +1,10 @@
+<%= simple_form_for @article do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content %>
+  <%= f.submit class: 'btn btn-primary mb-3' %>
+<% end %>
+<% if @article.new_record? %>
+  <%= link_to "Back", articles_path  %>
+<% else %>
+  <%= link_to "Back", article_path  %>
+<% end %>

@@ -10,6 +10,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="d-flex justify-content-between p-3 bg-light mb-5 border-bottom">
+      <%= link_to 'Wikinimous', articles_path  %>
+      <%= link_to 'New article', new_article_path %>
+    </nav>
+    <section class="container">
+      <div class="row">
+        <div class="col-8 mx-auto">
+          <%= yield %>        
+        </div>
+      </div>
+    </section>
   </body>
 </html>
